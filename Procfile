@@ -1,0 +1,1 @@
+web: gunicorn crudapp.wsgi
