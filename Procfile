@@ -1,1 +1,1 @@
-web: gunicorn crudapp.wsgi
+web: gunicorn --pythonpath myproject myproject.wsgi
