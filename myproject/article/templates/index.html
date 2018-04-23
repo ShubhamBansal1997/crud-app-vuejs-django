@@ -141,6 +141,11 @@
           <h1>List of Articles
           <button  type="button" class="btn btn-primary" data-toggle="modal" data-target="#addArticleModal">ADD ARTICLE</button>
           </h1>
+          &emsp;
+          <div class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="text" placeholder="Search" v-model="search_term" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" v-on:click.prevent="getArticles()">Search</button>
+          </div>
           <table class="table">
             <thead>
               <tr>
@@ -271,14 +276,19 @@
         currentArticle: {},
         message: null,
         newArticle: { 'article_heading': null, 'article_body': null },
+        search_term: '',
       },
       mounted: function() {
         this.getArticles();
       },
       methods: {
         getArticles: function() {
+          let api_url = '/api/article/';
+          if(this.search_term!==''||this.search_term!==null) {
+            api_url = `/api/article/?search=${this.search_term}`
+          }
           this.loading = true;
-          this.$http.get('/api/article/')
+          this.$http.get(api_url)
               .then((response) => {
                 this.articles = response.data;
                 this.loading = false;
