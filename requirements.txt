@@ -1,5 +1,5 @@
 dj-database-url==0.4.2
-Django==2.2.2
+Django==2.2.8
 djangorestframework==3.9.1
 gunicorn==19.7.1
 pytz==2017.3
