@@ -33,3 +33,9 @@ If you would any error or issue you can mention in issues or raise a pull reques
 
 Made with ❤
 
+**Tips Are Appreciated! 💰 😉**
+
+**My Bitcoin address**: bc1qysxlz0p9nlcyndeysqltdhelwpdhurglgxz96x
+
+**My Ethereum address**: 0x42c98e296B27228d9ee84e519BEC8eE0d09cad30
+
